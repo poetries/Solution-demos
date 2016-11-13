@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>等分布局--table</title>
+	
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			.parent-fix{
+				margin-left:-20px;
+			}
+			.parent {
+				display:table;
+				width:100%;
+				table-layout:fixed;/* 布局优先 假如单元格没设置宽度 会使之平分*/
+			}
+			.column {
+				display:table-cell;
+				padding-left:20px;
+				background:#666;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent-fix">
+			<div class="parent">
+				<div class="column">
+					<p>1</p>
+				</div>
+				<div class="column">
+					<p>2</p>
+				</div>
+				<div class="column">
+					<p>3</p>
+				</div>
+				<div class="column">
+					<p>4</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

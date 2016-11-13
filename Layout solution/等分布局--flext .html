@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>等分布局--flex</title>
+	
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			.parent{
+				display:flex;
+			}
+			.column {
+				flex:1;/*分配剩余空间*/
+				background:red;
+			}
+			.column + .column {
+				margin-left:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="column">
+				<p>1</p>
+			</div>
+			<div class="column">
+				<p>2</p>
+			</div>
+			<div class="column">
+				<p>3</p>
+			</div>
+			<div class="column">
+				<p>4</p>
+			</div>
+		</div>
+	</body>
+</html>

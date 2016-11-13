@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>不定宽+自适应 flex布局</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			.parent {
+				display:flex;
+			}
+			
+			.left {
+				width:100px;
+				margin-right:20px;
+				background:blue;
+			}
+			.right {
+				flex:1;/*剩余空间分配给right*/
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 缺点：兼容性问题 、性能问题 一般用于小范围的布局 -->
+		<div class="parent">
+			<div class="left">
+				<p>left</p>
+			</div>
+			<div class="right">
+				<p>right</p>
+				<p>right</p>
+			</div>
+		</div>		
+	</body>
+</html>
